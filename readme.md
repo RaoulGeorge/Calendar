@@ -20,7 +20,7 @@ Localstorage adapter for Backbone - https://github.com/jeromegn/Backbone.localSt
 
 
 <h2>Stuff I haven't completed yet</h2>
-Reminder and birthday functionality. Right now they are just 2 big buttons.
-Trying to figure out a way to incorporate a delete alarms view.
-In weekly view I want to add a time refernce. Maybe 24 rows corresponding to 24 hours in a day
-Maybe have a daily view as well???
+Reminder and birthday functionality. Right now they are just 2 big buttons.<br />
+Trying to figure out a way to incorporate a delete alarms view.<br />
+In weekly view I want to add a time refernce. Maybe 24 rows corresponding to 24 hours in a day.<br />
+Maybe have a daily view as well???<br />
