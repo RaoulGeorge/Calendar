@@ -10,8 +10,6 @@ views/menuView.js - View for displaying the menu<br />
 views/addAlarmView.js - View for displaying the "Add alarm" form<br />
 models/dateCollection.js - Contains 365 date models in a single collection<br />
 
-<br />
-
 <h2>Libs Used</h2>
 jQuery<br />
 Handlebars<br />
@@ -21,3 +19,8 @@ Require<br />
 Localstorage adapter for Backbone - https://github.com/jeromegn/Backbone.localStorage<br />
 
 
+<h2>Stuff I haven't completed yet</h2>
+Reminder and birthday functionality. Right now they are just 2 big buttons.
+Trying to figure out a way to incorporate a delete alarms view.
+In weekly view I want to add a time refernce. Maybe 24 rows corresponding to 24 hours in a day
+Maybe have a daily view as well???
