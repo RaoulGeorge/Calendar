@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script data-main="js/main" src="js/libs/require.js"></script>
+
+		<title>Calendar</title>
+	</head>
+	<body>
+		<!-- Menu template which holds the buttons for adding items to the calendar and changing calendar view  -->
+		<script id="menu-template" type="text/x-handlebars-template">
+			<span id="menu-span">
+				<div id="add-menu">
+					<a href="#alarm/new" id="add-alarm-btn" class="add-btn" >Add Alarm </a>
+					<a href="#" id="add-reminder-btn" class="add-btn" >Add Reminder</a>
+					<a href="#" id="add-birthday-btn" class="add-btn" >Add Birthday</a>
+					<a href="#" id="clear-btn" class="add-btn" >Clear all data</a>
+				</div>
+
+				<div id="change-format-menu">
+					<fieldset>
+						<legend>Calendar Format</legend>
+						{{#ifViewIsMonthly}}
+							<input type="radio"  name="calendarFormat" value="monthly" checked="checked">Monthly</input>
+							<input type="radio"  name="calendarFormat" value="weekly">Weekly</input>
+						{{else}}
+							<input type="radio"  name="calendarFormat" value="monthly" >Monthly</input>
+							<input type="radio"  name="calendarFormat" value="weekly" checked="checked">Weekly</input>
+						{{/ifViewIsMonthly}}
+					</fieldset>
+				</div>
+			</span>
+		</script>	
+
+		
+		<!-- Calendar template which displays the calendar -->
+		<script id="calendar-monthly-template" type="text/x-handlebars-template">
+			<div>
+				<div id="calendar-header">				
+					<span id="prev-btn"><img src="img/icons/prev.png" /></span>
+					<span><h1 align="center">{{calendar_month}}</h1></span>
+					<span id="next-btn"><img src="img/icons/next.png" align="right"/>
+					</span>
+			    </div>
+					
+			    {{#each calendar_days}}					  		
+			     	{{#if this}}			     		
+			     		<div class="calendar-day calendar-day-click" {{{createId this}}}>
+			     	{{else}}
+			     		<div class="calendar-day" {{{createId this}}}>
+			     	{{/if}}
+			     	
+			        <div class="calendar-day-header">
+			     		 	{{this}}
+			     	</div> 
+			     	</div>
+			    {{/each}}			
+			</div>
+		</script>
+		
+		<!-- Weekly view of the calendar - In Progress -->
+		<script id="calendar-weekly-template" type="text/x-handlebars-template">
+			<div>
+				<div id="calendar-header">				
+					<span id="prev-btn-weekly"><img src="img/icons/prev.png" /></span>
+					<span><h1 align="center">{{calendar_week}}</h1></span>
+					<span id="next-btn-weekly"><img src="img/icons/next.png" align="right"/>
+					</span>
+			    </div>
+					
+			    {{#each calendar_days}}					  		
+			     	{{#if this}}			     		
+			     		<div class="calendar-day-weekly calendar-day-click" {{{createId this}}}>
+			     	{{else}}
+			     		<div class="calendar-day-weekly" {{{createId this}}}>
+			     	{{/if}}
+			     	
+			        <div class="calendar-day-header">
+			     		 	{{this}}
+			     	</div> 
+			     	</div>
+			    {{/each}}			
+			</div>
+		</script>
+		
+		<!-- Once an alarm has been added, this template will be rendered inside the calendar view  -->
+		<script id="alarm-template" type="text/x-handlebars-template">
+			<div class="alarm-div" data-alarm-cid="{{alarm_cid}}">{{alarm_name}}</div>
+		</script>
+
+		<!-- Once an reminder has been added, this template will be rendered inside the calendar view  -->
+		<script id="reminder-template" type="text/x-handlebars-template">
+			<div class="reminder-div"></div>
+		</script>
+
+		<!-- Once an birthday has been added, this template will be rendered inside the calendar view  -->
+		<script id="birthday-template" type="text/x-handlebars-template">
+			<div class="birthday-div"></div>
+		</script>
+
+		
+		<!-- template used for the user to add details about the alarm -->
+		<script id="add-alarm-template" type="text/x-handlebars-template">
+			<div>			
+					<label for="time">Time:</label> 
+					<input type="text" id="time-input" name="time" required placeholder="Time" />
+					
+					<label for="repeat" >Repeat:</label> 
+					<select id = "repeat-list" name="repeat" required>
+		               <option value="1">Once</option>
+		               <option value="2">Everyday</option>
+		               <option value="3">Every week</option>
+		               <option value="4">Every Month</option>
+		               <option value="5">Every Year</option>
+		             </select>
+
+					<label for="name">Name:</label> 
+					<input type="text" name="name" required placeholder="Name" id="name-input"/>
+
+					
+					<a href="#"><input type="submit" value="Add Alarm" id="add-alarm-submit-btn" /></a>
+					
+				
+			</div>
+		</script>
+		
+		<div id="menu-div"></div>
+		<div id="add-alarm-div"></div>
+		<div id="calendar-div"></div>
+
+	</body>
+</html>

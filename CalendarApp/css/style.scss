@@ -1,0 +1,216 @@
+$grey: grey;
+$cornflowerblue: cornflowerblue;
+$beige: #FFE680;
+$pink: #FF6666;
+$dark_grey: #464646;
+$light_grey: #B2B2B2;
+$background_color: #E8E8F0;
+$green: #39BD48;
+$yellow: #C4C400;
+$maroon: #E61042;
+$mouseover_color: #E3D8DA;
+
+
+html {
+	background: $background_color;
+	color: $dark_grey;
+}
+
+#calendar-header{
+	width: 100%;
+}
+#calendar-header span{
+	display: inline-block;
+	width: 33%;
+}
+
+.calendar-day {
+	width: 13%;
+	float: left;
+	text-align: center;
+	border: solid 1px black;
+	border-radius: 5px;
+	height: 100px;
+	margin: 5px;
+	overflow: hidden;
+
+}
+
+.calendar-day-weekly {
+	width: 13%;
+	float: left;
+	text-align: center;
+	border: solid 1px black;
+	border-radius: 5px;
+	height: 600px;
+	margin: 5px;
+	overflow: hidden;
+
+}
+
+.calendar-day-header {
+	background: $cornflowerblue;
+	margin-top: 0px;
+}
+
+
+
+.calendar-day-mouseover {
+	background: $mouseover_color;
+}
+
+
+.calendar-day-click {
+	background: darken($mouseover_color, 10%);
+}
+
+
+.alarm-div {
+	width: 33%;
+	height: 12px;
+	background: $green;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 3px;
+	margin: 1px;
+}
+
+.reminder-div {
+	position: relative;
+	top: 0px;
+	width: 5px;
+	height: 5px;
+	background: $yellow;
+}
+
+.birthday-div {
+	width: 5px;
+	height: 5px;
+	background: $maroon;
+}
+
+
+#add-alarm-btn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809) );
+	background:-moz-linear-gradient( center top, #89c403 5%, #77a809 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+	background-color:#89c403;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #528009;
+}#add-alarm-btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403) );
+	background:-moz-linear-gradient( center top, #77a809 5%, #89c403 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+	background-color:#77a809;
+}#add-alarm-btn:active {
+	position:relative;
+	top:1px;
+}
+
+#add-reminder-btn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23) );
+	background:-moz-linear-gradient( center top, #ffec64 5%, #ffab23 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23');
+	background-color:#ffec64;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	color:#333333;
+	font-family:arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffee66;
+}#add-reminder-btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64) );
+	background:-moz-linear-gradient( center top, #ffab23 5%, #ffec64 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64');
+	background-color:#ffab23;
+}#add-reminder-btn:active {
+	position:relative;
+	top:1px;
+}
+
+
+#add-birthday-btn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	box-shadow:inset 0px 1px 0px 0px #fab3ad;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fa665a), color-stop(1, #d34639) );
+	background:-moz-linear-gradient( center top, #fa665a 5%, #d34639 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa665a', endColorstr='#d34639');
+	background-color:#fa665a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #98231a;
+}#add-birthday-btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d34639), color-stop(1, #fa665a) );
+	background:-moz-linear-gradient( center top, #d34639 5%, #fa665a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d34639', endColorstr='#fa665a');
+	background-color:#d34639;
+}#add-birthday-btn:active {
+	position:relative;
+	top:1px;
+}
+
+#clear-btn {
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+	float: right;
+}#clear-btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}#clear-btn:active {
+	position:relative;
+	top:1px;
+}
+
