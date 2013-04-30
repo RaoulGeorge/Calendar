@@ -44,7 +44,6 @@ define([
 			//If the currently rendered date was selected by the user, we add a class="calendar-day-click"
 			Handlebars.registerHelper('if', function(conditional, options) {	
 				  var str =  (conditional.split(',')[1]).replace(/\s+/g, ''); //Extract the date portion from the id. Converts Sun, 13 to 13.
-
 				  if(str + '-' + calendarModel.get('selectedMonth') === selectedDayModel.get("selectedDayId")) {
 				    return options.fn(this);
 

@@ -51,7 +51,6 @@ define([
 		//Returns the entire week as an array 
 		getCurrentWeek: function(currentDate) {
 			
-			console.log('Unformatted date is ' + currentDate);
 			/*var date_str = [(month.indexOf(currentDate.split('-')[1])+1),((currentDate.split('-')[0])),'2013'].join('/');
 			//console.log('date_str = ' + date_str);
 
@@ -62,7 +61,7 @@ define([
 			 {
 			    datesToBeDisplayed[i] = new Date(currentDate.getFullYear(),
 						                           currentDate.getMonth(),
-						                           currentDate.getDate() - currentDate.getDay() + 1 + i);
+						                           currentDate.getDate() - currentDate.getDay()  + i);
 			 }
 
 			return datesToBeDisplayed;

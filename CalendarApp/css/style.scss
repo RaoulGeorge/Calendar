@@ -16,12 +16,36 @@ html {
 	color: $dark_grey;
 }
 
+body {
+	padding: 0px;
+}
+#menu-div {
+	padding: 0px;
+	width: 100%;
+}
+#menu-fieldset {
+	background :$dark_grey;
+	color: white;
+	margin: 0px;
+	border: 0px;
+}
+
 #calendar-header{
 	width: 100%;
 }
 #calendar-header span{
 	display: inline-block;
 	width: 33%;
+}
+
+#calendar-header-h1 {
+	text-shadow: 0px 1px 1px #4d4d4d;
+        color: darken($background_color, 40%);
+        font:  'LeagueGothicRegular';
+}
+
+#calendar-date-container {
+	position: absolute;
 }
 
 .calendar-day {
@@ -34,6 +58,19 @@ html {
 	margin: 5px;
 	overflow: hidden;
 
+}
+
+#calendar-time-weekly {
+	width: 3%;
+	float: left;
+	text-align: center;
+	height: 600px;
+	margin: 5px;
+	overflow: hidden;
+}
+
+.calendar-hour-weekly {
+	margin: 4px;
 }
 
 .calendar-day-weekly {
@@ -201,9 +238,11 @@ html {
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
+	padding-top: 28px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
 	float: right;
+	height: 50px;
 }#clear-btn:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );

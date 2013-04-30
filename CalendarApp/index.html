@@ -10,6 +10,7 @@
 	<body>
 		<!-- Menu template which holds the buttons for adding items to the calendar and changing calendar view  -->
 		<script id="menu-template" type="text/x-handlebars-template">
+		<fieldset id="menu-fieldset">
 			<span id="menu-span">
 				<div id="add-menu">
 					<a href="#alarm/new" id="add-alarm-btn" class="add-btn" >Add Alarm </a>
@@ -19,8 +20,8 @@
 				</div>
 
 				<div id="change-format-menu">
-					<fieldset>
-						<legend>Calendar Format</legend>
+					
+						<!--<legend>Calendar Format</legend>-->
 						{{#ifViewIsMonthly}}
 							<input type="radio"  name="calendarFormat" value="monthly" checked="checked">Monthly</input>
 							<input type="radio"  name="calendarFormat" value="weekly">Weekly</input>
@@ -28,9 +29,10 @@
 							<input type="radio"  name="calendarFormat" value="monthly" >Monthly</input>
 							<input type="radio"  name="calendarFormat" value="weekly" checked="checked">Weekly</input>
 						{{/ifViewIsMonthly}}
-					</fieldset>
+					
 				</div>
 			</span>
+			</fieldset>
 		</script>	
 
 		
@@ -39,11 +41,11 @@
 			<div>
 				<div id="calendar-header">				
 					<span id="prev-btn"><img src="img/icons/prev.png" /></span>
-					<span><h1 align="center">{{calendar_month}}</h1></span>
+					<span><h1 align="center" id="calendar-header-h1">{{calendar_month}}</h1></span>
 					<span id="next-btn"><img src="img/icons/next.png" align="right"/>
 					</span>
 			    </div>
-					
+				<div id="calendar-date-container">
 			    {{#each calendar_days}}					  		
 			     	{{#if this}}			     		
 			     		<div class="calendar-day calendar-day-click" {{{createId this}}}>
@@ -55,7 +57,8 @@
 			     		 	{{this}}
 			     	</div> 
 			     	</div>
-			    {{/each}}			
+			    {{/each}}	
+			    </div>		
 			</div>
 		</script>
 		
@@ -64,10 +67,39 @@
 			<div>
 				<div id="calendar-header">				
 					<span id="prev-btn-weekly"><img src="img/icons/prev.png" /></span>
-					<span><h1 align="center">{{calendar_week}}</h1></span>
+					<span><h1 align="center" id="calendar-header-h1">{{calendar_week}}</h1></span>
 					<span id="next-btn-weekly"><img src="img/icons/next.png" align="right"/>
 					</span>
 			    </div>
+			    <div id="calendar-time-weekly">
+				    <div>Time</div>
+				    <div class="calendar-hour-weekly">00</div>
+				    <div class="calendar-hour-weekly">01</div>
+				    <div class="calendar-hour-weekly">02</div>
+				    <div class="calendar-hour-weekly">03</div>
+				    <div class="calendar-hour-weekly">04</div>
+				    <div class="calendar-hour-weekly">05</div>
+				    <div class="calendar-hour-weekly">06</div>
+				    <div class="calendar-hour-weekly">07</div>
+				    <div class="calendar-hour-weekly">08</div>
+				    <div class="calendar-hour-weekly">09</div>
+				    <div class="calendar-hour-weekly">10</div>
+				    <div class="calendar-hour-weekly">11</div>
+				    <div class="calendar-hour-weekly">12</div>
+				    <div class="calendar-hour-weekly">13</div>
+				    <div class="calendar-hour-weekly">14</div>
+				    <div class="calendar-hour-weekly">15</div>
+				    <div class="calendar-hour-weekly">16</div>
+				    <div class="calendar-hour-weekly">17</div>
+				    <div class="calendar-hour-weekly">18</div>
+				    <div class="calendar-hour-weekly">19</div>
+				    <div class="calendar-hour-weekly">20</div>
+				    <div class="calendar-hour-weekly">21</div>
+				    <div class="calendar-hour-weekly">22</div>
+				    <div class="calendar-hour-weekly">23</div>
+				    
+				</div>
+
 					
 			    {{#each calendar_days}}					  		
 			     	{{#if this}}			     		
